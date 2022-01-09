@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from .views import IndexView, ListOfVisitors
 
 urlpatterns = [
     path('', IndexView.as_view(), name='home'),
