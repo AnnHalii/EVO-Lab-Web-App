@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+<a href="{% url 'all'%}">Усі відвідувачі</a>
+<form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    {% for input in form %}
+    <p>
+        {{input.label}}
+        {{input}}
+    </p>
+    {% endfor %}
+
+    <button type="submit">Привітатись</button>
+</form>
+{{seen_text}}
+
+<br>
+{% for visitor in visitors %}
+    <p>{{visitor}}</p>
+{% endfor %}
+</body>
+</html>
