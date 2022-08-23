@@ -17,4 +17,4 @@ logs:
 	$(COMPOSE) logs -f web
 
 exec:
-	docker exec -it mainapp_web_1 bash
+	docker exec -it lab-web-app_web_1 bash

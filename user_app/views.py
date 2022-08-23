@@ -5,7 +5,7 @@ from .models import AdditionalData
 
 class IndexView(FormView):
     form_class = IndexForm
-    template_name = 'user_app/index.html'
+    template_name = 'index.html'
     model = AdditionalData
     success_url = '/'
 
@@ -37,5 +37,5 @@ class ListOfVisitors(ListView):
     model = AdditionalData
     paginate_by = 20
     ordering = 'first_name'
-    template_name = 'user_app/index.html'
+    template_name = 'index.html'
     context_object_name = 'visitors'
